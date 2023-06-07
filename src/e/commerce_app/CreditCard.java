@@ -52,8 +52,9 @@ public class CreditCard {
     public void writeAllAtts(){
         System.out.println("");
         System.out.println("***************");
-        System.out.println("Credit Card no: " + this.creditCardNumber);
+        System.out.println("USER'S CREDITCARD INFO");
         System.out.println("Owner: " + this.creditCardOwner.getName()+ " " + this.creditCardOwner.getSurname());
+        System.out.println("Credit Card no: " + this.creditCardNumber);
         System.out.println("Security Code: " + this.securityCode);
         System.out.println("Expiration Date: " + this.expirationDate);
         System.out.println("***************");

@@ -72,12 +72,13 @@ public class Product {
     
     //*********************************************
     public boolean updateStock(int productAmount){
-        if (productAmount <= this.stock) {
-            this.setStock(this.stock - productAmount);
-            System.out.println("");
+        System.out.println("The stock for " + productName + ":" + this.stock);
+            if (productAmount <= this.stock) {
+                this.setStock(this.stock - productAmount);
+                System.out.println("The Stock  after order for " + productName + ":"+ this.stock);
             return true;
-        }
-        else{
+        }   
+            else {
             System.out.println("");
             System.out.println("*************************");
             System.out.println("Not enough stock to order.");
@@ -89,12 +90,13 @@ public class Product {
     public void writeAllAtts(){
         System.out.println("");
         System.out.println("***************");
-        System.out.println("Product Name:" + this.productName);
-        System.out.println("Product Color:" + this.productColor);
-        System.out.println("Product Category:" + this.productCategory);
-        System.out.println("Stock Info:" + this.stock);
-        System.out.println("Product Weight:"+this.productWeight);
-        System.out.println("Product Description:"+this.productDescription);
+        System.out.println("PRODUCT INFO");
+        System.out.println("Product Name: " + this.productName);
+        System.out.println("Product Color: " + this.productColor);
+        System.out.println("Product Category: " + this.productCategory);
+        System.out.println("Stock Info: " + this.stock);
+        System.out.println("Product Weight: "+this.productWeight);
+        System.out.println("Product Description: "+this.productDescription);
         System.out.println("***************");
         System.out.println("");
     }

@@ -109,27 +109,31 @@ public class User {
     
     public void addtoFav(Product product){
         this.favProductList.add(product);
-        System.out.println("Product '" + product.getProductName() + "' added to favorites.");
-        System.out.println("Favourite Product(s):"+ product.getProductName());
+        System.out.println(this.username + ", " + "product '" + product.getProductName() + "' added to your favorite list.");
+        System.out.println(this.username +"'s favourite product(s) list: ");
+        for (int i = 0; i < favProductList.size(); i++) {
+            System.out.println(favProductList.get(i).getProductName());
+        }
     }
     
     public void addToCart(Product product ){
         this.orderedProducts.add(product);
         
-        System.out.println( product.getProductName() +" added to your cart.");
+        System.out.println( this.username + ", " + product.getProductName() +" added to your cart.");
     }
     
     public void writeAllAtts(){
         System.out.println("");
         System.out.println("***************");
-        System.out.println("Username:" + this.username);
-        System.out.println("Name:" + this.name);
-        System.out.println("Surname:" + this.surname);
-        System.out.println("Date Of Birth:" + this.dateOfBirth);
-        System.out.println("Password:"+this.password);
-        System.out.println("Email:"+this.email);
-        System.out.println("Home Adress:" + this.homeAdress);
-        System.out.println("Work Adress:" + this.workAdress);
+        System.out.println("USER INFO");
+        System.out.println("Username: " + this.username);
+        System.out.println("Name: " + this.name);
+        System.out.println("Surname: " + this.surname);
+        System.out.println("Date Of Birth: " + this.dateOfBirth);
+        System.out.println("Password: "+this.password);
+        System.out.println("Email: "+this.email);
+        System.out.println("Home Adress: " + this.homeAdress);
+        System.out.println("Work Adress: " + this.workAdress);
         System.out.println("***************");
         System.out.println("");
     }

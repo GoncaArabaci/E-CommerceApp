@@ -45,22 +45,24 @@ public class Order {
     
     public void orderProduct() {
         Scanner s = new Scanner(System.in);
-        System.out.println("Enter the quantity you want to order:");
+        System.out.println(user.getUsername() +", please enter the quantity you want to order:");
         int productAmount = s.nextInt();
-        
-        
             if (this.orderedProduct.updateStock(productAmount)) {
                 System.out.println("Please enter your credit card's security code for purchase:");
                 String input = s.next();
                 if (input.equals(this.creditCard.getSecurityCode())) {
                     System.out.println("");
                     System.out.println("*************************");
-                    System.out.println("Your order for " + productAmount + " " + this.orderedProduct.getProductName() + "(s) has been ordered successfully.");
+                    System.out.println(user.getUsername()+", your order for " + productAmount + " " + this.orderedProduct.getProductName() + "(s) ordered successfully.");
                     System.out.println("*************************");
                     System.out.println("");
                 } 
                 else {
-                System.out.println("The code you entered is wrong");
+                    System.out.println("");
+                    System.out.println("*************************");    
+                    System.out.println("The security code you entered is wrong.The order process failed.");
+                    System.out.println("*************************");
+                    System.out.println("");      
                 }
             }
         
